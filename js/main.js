@@ -145,31 +145,48 @@ function showDay(btn, day) {
 window.showDay = showDay;
 
 // ─── FORM SUBMIT
-function submitForm(e) {
-  e.preventDefault();
-
-  const btn = document.querySelector('.form-submit');
+function initContactForm() {
   const form = document.getElementById('contactForm');
   const success = document.getElementById('formSuccess');
+  const error = document.getElementById('formError');
+  const btn = form?.querySelector('.form-submit');
 
-  if (!btn || !form || !success) return;
+  if (!form || !success || !error || !btn) return;
 
-  btn.textContent = 'Enviando...';
-  btn.disabled = true;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-  setTimeout(() => {
-    form.reset();
-    success.style.display = 'block';
-    btn.textContent = 'Enviar Mensagem →';
-    btn.disabled = false;
+    success.style.display = 'none';
+    error.style.display = 'none';
 
-    setTimeout(() => {
-      success.style.display = 'none';
-    }, 5000);
-  }, 1200);
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+
+    try {
+      const formData = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        form.reset();
+        success.style.display = 'block';
+      } else {
+        error.style.display = 'block';
+      }
+    } catch (err) {
+      error.style.display = 'block';
+    } finally {
+      btn.textContent = 'Enviar Mensagem';
+      btn.disabled = false;
+    }
+  });
 }
-
-window.submitForm = submitForm;
 
 // ─── SCROLL ANIMATIONS
 function initScrollAnimations() {
@@ -198,6 +215,7 @@ function initScrollAnimations() {
 document.addEventListener('DOMContentLoaded', () => {
   initCarousel();
   initScrollAnimations();
+  initContactForm();
 
   const firstTab = document.querySelector('.tab-btn');
   if (firstTab) {

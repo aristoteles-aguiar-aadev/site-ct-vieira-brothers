@@ -61,10 +61,8 @@
   <!-- NAV -->
   <nav id="navbar">
     <a href="#hero" class="nav-logo">
-      <div>
-        <span class="ct">CT</span>
-      </div>
-      <div class="vb">VIEIRA BROTHERS<span>Academia de Artes Marciais</span></div>
+      <img src="./assets/img/logo_ct_vieira_bg_rdm.png" alt="CT Vieira Brothers" class="nav-logo-img" />
+      <span class="nav-logo-subtitle">Academia de Artes Marciais</span>
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#modalidades">Modalidades</a></li>
@@ -163,7 +161,8 @@
     <div class="sobre-visual">
       <div class="sobre-box">
         <div class="carousel" id="sobreCarousel">
-          <img src="./assets/img/carrossel/foto-1.jpeg" alt="Foto 1" class="carousel-image active">
+          <img src="./assets/img/carrossel/bjj2.jpg" alt="Foto 1" class="carousel-image active">
+          <img src="./assets/img/carrossel/foto-1.jpeg" alt="Foto 1" class="carousel-image">
           <img src="./assets/img/carrossel/foto-2.jpeg" alt="Foto 2" class="carousel-image">
           <img src="./assets/img/carrossel/foto-3.jpeg" alt="Foto 3" class="carousel-image">
           <img src="./assets/img/carrossel/foto-4.jpeg" alt="Foto 4" class="carousel-image">
@@ -355,38 +354,55 @@
     </div>
 
     <div>
-      <form class="contato-form" id="contactForm" onsubmit="submitForm(event)">
+      <form class="contato-form" id="contactForm" action="https://formsubmit.co/ajax/aristotelesouza@gmail.com"
+        method="POST">
+        <input type="hidden" name="_subject" value="Novo contato do site CT Vieira Brothers">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label">Nome *</label>
-            <input type="text" class="form-input" placeholder="Seu nome" required>
+            <label class="form-label" for="nome">Nome *</label>
+            <input id="nome" name="nome" type="text" class="form-input" placeholder="Seu nome" required>
           </div>
+
           <div class="form-group">
-            <label class="form-label">WhatsApp *</label>
-            <input type="tel" class="form-input" placeholder="(85) 99999-9999" required>
+            <label class="form-label" for="whatsapp">WhatsApp *</label>
+            <input id="whatsapp" name="whatsapp" type="tel" class="form-input" placeholder="(85) 99999-9999" required>
           </div>
         </div>
+
         <div class="form-group">
-          <label class="form-label">E-mail</label>
-          <input type="email" class="form-input" placeholder="seu@email.com">
+          <label class="form-label" for="email">E-mail</label>
+          <input id="email" name="email" type="email" class="form-input" placeholder="seu@email.com">
         </div>
+
         <div class="form-group">
-          <label class="form-label">Modalidade de Interesse</label>
-          <select class="form-select">
+          <label class="form-label" for="modalidade">Modalidade de Interesse</label>
+          <select id="modalidade" name="modalidade" class="form-select">
             <option value="">Selecione uma modalidade</option>
-            <option>Muay Thai</option>
-            <option>Jiu-Jitsu</option>
-            <option>Kids (Infantil)</option>
-            <option>Ainda não sei — quero conhecer</option>
+            <option>Jiu-Jitsu (Iniciante ao Avançado)</option>
+            <option>Jiu-Jitsu Kids (04 a 14 anos)</option>
+            <option>Muay Thai (Em breve)</option>
+            <option>Ainda não sei (Quero conhecer)</option>
           </select>
         </div>
+
         <div class="form-group">
-          <label class="form-label">Mensagem</label>
-          <textarea class="form-textarea"
+          <label class="form-label" for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" class="form-textarea"
             placeholder="Conta um pouco sobre você e o que te motivou a entrar em contato..."></textarea>
         </div>
-        <button type="submit" class="form-submit">Enviar Mensagem →</button>
-        <div class="form-success" id="formSuccess">✓ Mensagem enviada! Em breve entraremos em contato.</div>
+
+        <button type="submit" class="form-submit">Enviar Mensagem</button>
+
+        <div class="form-success" id="formSuccess">
+          ✓ Recebemos sua mensagem. Logo entraremos em contato.
+        </div>
+
+        <div class="form-error" id="formError">
+          Não foi possível enviar sua mensagem agora. Tente novamente em instantes.
+        </div>
       </form>
     </div>
   </section>
@@ -403,9 +419,9 @@
     <div class="footer-center">
       <p class="footer-copy">© 2026 CT Vieira Brothers. Todos os direitos reservados.</p>
       <p class="footer-dev">
-        Site desenvolvido por
-        <a href="https://wa.me/5585981066622" target="_blank" rel="noopener noreferrer"
-          title="Falar com Dev Lab no WhatsApp" class="footer-dev-link">
+        Site desenvolvido por:
+        <a href="https://wa.me/5585981066622?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20Desenvolvimento%20de%20site."
+          target="_blank" rel="noopener noreferrer" title="Falar com Dev Lab no WhatsApp" class="footer-dev-link">
           Dev Lab
         </a>
       </p>
@@ -430,8 +446,9 @@
   </footer>
 
   <!-- WHATSAPP FLOAT -->
-  <a href="https://wa.me/+5585987328337" class="whatsapp-float" target="_blank" title="Falar no WhatsApp"> <img
-      src="./assets/icons/whatsapp.png" alt="WhatsApp" class="social-icon-wpp" /></a>
+  <a href="https://wa.me/5585987328337?text=Olá,%20quero%20mais%20informações%20sobre%20as%20Artes%20Marciais%20do%20CT%20Vieira%20Brothers."
+    class="whatsapp-float" target="_blank" title="Falar no WhatsApp"> <img src="./assets/icons/whatsapp.png"
+      alt="WhatsApp" class="social-icon-wpp" /></a>
 
   <script src="./js/main.js"></script>
 </body>
