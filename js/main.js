@@ -85,7 +85,7 @@ function initCarousel() {
 const schedule = {
   seg: [
     { time: '08:00', mod: 'Jiu-Jitsu', level: 'Todos os níveis', prof: 'Prof. Alysson Bruno' },
-    { time: '18:00', mod: 'Kids Jiu-Jitsu', level: '03–14 anos', prof: 'Prof. Carlos Henrique e Prof. Denilson Souza' },
+    { time: '18:00', mod: 'Kids Jiu-Jitsu', level: '05–14 anos', prof: 'Prof. Carlos Henrique e Prof. Denilson Souza' },
     { time: '19:30', mod: 'Jiu-Jitsu', level: 'Todos os níveis', prof: 'Prof. Alysson Bruno' },
     { time: '21:30', mod: 'Jiu-Jitsu', level: 'Todos os níveis', prof: 'Prof. Alysson Bruno' }
   ],
@@ -94,7 +94,7 @@ const schedule = {
   ],
   qua: [
     { time: '08:00', mod: 'Jiu-Jitsu', level: 'Todos os níveis', prof: 'Prof. Alysson Bruno' },
-    { time: '18:00', mod: 'Kids Jiu-Jitsu', level: '03–14 anos', prof: 'Prof. Carlos Henrique e Prof. Denilson Souza' },
+    { time: '18:00', mod: 'Kids Jiu-Jitsu', level: '05–14 anos', prof: 'Prof. Carlos Henrique e Prof. Denilson Souza' },
     { time: '19:30', mod: 'Jiu-Jitsu', level: 'Todos os níveis', prof: 'Prof. Alysson Bruno' },
     { time: '21:30', mod: 'Jiu-Jitsu', level: 'Todos os níveis', prof: 'Prof. Alysson Bruno' }
   ],
@@ -103,7 +103,7 @@ const schedule = {
   ],
   sex: [
     { time: '08:00', mod: 'Jiu-Jitsu', level: 'Todos os níveis', prof: 'Prof. Alysson Bruno' },
-    { time: '18:00', mod: 'Kids Jiu-Jitsu', level: '03–14 anos', prof: 'Prof. Carlos Henrique e Prof. Denilson Souza' },
+    { time: '18:00', mod: 'Kids Jiu-Jitsu', level: '05–14 anos', prof: 'Prof. Carlos Henrique e Prof. Denilson Souza' },
     { time: '19:30', mod: 'Jiu-Jitsu', level: 'Todos os níveis', prof: 'Prof. Alysson Bruno' },
     { time: '21:30', mod: 'Jiu-Jitsu', level: 'Todos os níveis', prof: 'Prof. Alysson Bruno' }
   ]
