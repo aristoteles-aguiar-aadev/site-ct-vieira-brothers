@@ -7,6 +7,7 @@
   --gray-mid: #1c1c1c;
   --gray-light: #2a2a2a;
   --text-muted: #888888;
+  --text-devlab: #73f44c;
 }
 
 *,
@@ -1161,7 +1162,7 @@ footer {
 }
 
 .footer-dev a {
-  color: var(--red);
+  color: var(--text-devlab);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -1174,6 +1175,31 @@ footer {
   display: flex;
   gap: 0.8rem;
   align-items: center;
+}
+.footer-dev {
+  font-size: 1rem;
+  color: var(--text-devlab);
+}
+
+.footer-dev-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-devlab);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-dev-link:hover {
+  color: var(--text-devlab);
+}
+
+.footer-dev-logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: contain;
 }
 
 .social-btn {
