@@ -1,24 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SportsActivityLocation",
-      "name": "CT Vieira Brothers",
-      "image": "https://www.ctvieirabrothers.com.br/assets/img/logo_ct_vieira_bg_rdm.png",
-      "url": "https://www.ctvieirabrothers.com.br/",
-      "telephone": "+55-85-98732-8337",
-      "email": "contato@ctvieirabros.com.br",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rua Leonel Chaves, 431",
-        "addressLocality": "Fortaleza",
-        "addressRegion": "CE",
-        "addressCountry": "BR"
-      },
-      "description": "Academia de Jiu-Jitsu e artes marciais em Fortaleza para crianças, adultos e competidores."
-    }
-    </script>
 
 <head>
   <meta charset="UTF-8">
@@ -54,16 +35,37 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="./css/styles.css">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "name": "CT Vieira Brothers",
+      "image": "https://www.ctvieirabrothers.com.br/assets/img/logo_ct_vieira_bg_rdm.png",
+      "url": "https://www.ctvieirabrothers.com.br/",
+      "telephone": "+55-85-98732-8337",
+      "email": "contato@ctvieirabros.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Leonel Chaves, 431",
+        "addressLocality": "Fortaleza",
+        "addressRegion": "CE",
+        "addressCountry": "BR"
+      },
+      "description": "Academia de Jiu-Jitsu e artes marciais em Fortaleza para crianças, adultos e competidores."
+    }
+  </script>
 </head>
 
 <body>
 
   <!-- NAV -->
-  <nav id="navbar">
+  <nav id="navbar" aria-label="Navegação principal">
     <a href="#hero" class="nav-logo">
-      <img src="./assets/img/logo_ct_vieira_bg_rdm.png" alt="CT Vieira Brothers" class="nav-logo-img" />
+      <img src="./assets/img/logo_ct_vieira_bg_rdm.png" alt="CT Vieira Brothers" class="nav-logo-img">
       <span class="nav-logo-subtitle">Academia de Artes Marciais</span>
     </a>
+
     <ul class="nav-links" id="navLinks">
       <li><a href="#modalidades">Modalidades</a></li>
       <li><a href="#sobre">Sobre</a></li>
@@ -71,30 +73,42 @@
       <li><a href="#planos">Planos</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
+
     <a href="#contato" class="nav-cta">Matricule-se</a>
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Abrir menu">
       <span></span><span></span><span></span>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section id="hero">
+  <section id="hero" aria-labelledby="hero-heading">
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
     <div class="hero-slash"></div>
 
     <div class="hero-content">
       <div class="hero-badge">⚡ Forje seu melhor</div>
-      <h1 class="hero-title">
-        <img src="./assets/img/logo_ct_vieira_bg_rdm.png" alt="CT Vieira Brothers" class="hero-logo" />
+
+      <div class="hero-brand">
+        <img src="./assets/img/logo_ct_vieira_bg_rdm.png" alt="CT Vieira Brothers" class="hero-logo">
+      </div>
+
+      <h1 class="hero-heading" id="hero-heading">
+        Jiu-Jitsu para crianças, adultos e competidores
       </h1>
+
       <p class="hero-sub">
-        A melhor academia de artes marciais da região. Treinamentos de alto nível em Jiu-Jitsu para Infantil e Adultos e
-        muito mais. Para todos os níveis, de iniciante a competidor.
+        Aulas para todos os níveis com professores experientes, ambiente seguro e aula experimental grátis para você
+        começar hoje.
       </p>
+
       <div class="hero-btns">
-        <a href="#contato" class="btn-primary">Aula Experimental Grátis</a>
-        <a href="#modalidades" class="btn-outline">Ver Modalidades</a>
+        <a href="#contato" class="btn-primary">Agendar Aula Experimental</a>
+        <a href="https://wa.me/5585987328337?text=Olá,%20quero%20agendar%20uma%20aula%20experimental."
+          class="btn-outline" target="_blank" rel="noopener noreferrer">
+          Falar no WhatsApp
+        </a>
       </div>
     </div>
 
@@ -111,81 +125,88 @@
         <div class="stat-num">200+</div>
         <div class="stat-label">Títulos Conquistados</div>
       </div>
-      <!-- <div class="stat">
-        <div class="stat-num">6</div>
-        <div class="stat-label">Modalidades</div>
-      </div> -->
     </div>
   </section>
 
   <!-- MODALIDADES -->
-  <section id="modalidades">
+  <section id="modalidades" aria-labelledby="modalidades-title">
     <div class="modal-header">
       <div>
         <div class="section-label">O que oferecemos</div>
-        <h2 class="section-title">Nossas<br>Modalidades</h2>
+        <h2 class="section-title" id="modalidades-title">Nossas<br>Modalidades</h2>
       </div>
       <a href="#contato" class="btn-primary">Agendar Aula Grátis</a>
     </div>
 
     <div class="cards-grid">
-      <div class="card">
+      <article class="card">
         <div class="card-badge">Iniciante e Avançado</div>
-        <span class="card-icon">🤼</span>
-        <div class="card-title">Jiu-Jitsu</div>
-        <div class="card-desc">Arte marcial de solo focada em finalizações e controle. Ideal para autodefesa e
-          competição. Turmas para crianças e adultos.</div>
-      </div>
+        <span class="card-icon" aria-hidden="true">🤼</span>
+        <h3 class="card-title">Jiu-Jitsu</h3>
+        <p class="card-desc">
+          Arte marcial de solo focada em finalizações e controle. Ideal para autodefesa e competição. Turmas para
+          crianças e adultos.
+        </p>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <div class="card-badge">Infantil</div>
-        <span class="card-icon">🧒</span>
-        <div class="card-title">Kids</div>
-        <div class="card-desc">Programa especial para crianças de 05 a 14 anos. Disciplina, respeito e autoconfiança
-          através das artes marciais de forma segura e divertida.</div>
-      </div>
+        <span class="card-icon" aria-hidden="true">🧒</span>
+        <h3 class="card-title">Kids</h3>
+        <p class="card-desc">
+          Programa especial para crianças de 05 a 14 anos. Disciplina, respeito e autoconfiança através das artes
+          marciais de forma segura e divertida.
+        </p>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <div class="card-badge">Em breve</div>
-        <span class="card-icon">🥊</span>
-        <div class="card-title">Muay Thai</div>
-        <div class="card-desc">A arte dos oito membros. Trabalho completo de socos, cotoveladas, joelhadas e chutes.
-          Desenvolve condicionamento e técnica de alto nível.</div>
-      </div>
-
+        <span class="card-icon" aria-hidden="true">🥊</span>
+        <h3 class="card-title">Muay Thai</h3>
+        <p class="card-desc">
+          A arte dos oito membros. Trabalho completo de socos, cotoveladas, joelhadas e chutes. Desenvolve
+          condicionamento e técnica de alto nível.
+        </p>
+      </article>
     </div>
   </section>
 
   <!-- SOBRE -->
-  <section id="sobre">
+  <section id="sobre" aria-labelledby="sobre-title">
     <div class="sobre-visual">
       <div class="sobre-box">
         <div class="carousel" id="sobreCarousel">
-          <img src="./assets/img/carrossel/bjj2.jpg" alt="Foto 1" class="carousel-image active">
-          <img src="./assets/img/carrossel/foto-1.jpeg" alt="Foto 1" class="carousel-image">
-          <img src="./assets/img/carrossel/foto-2.jpeg" alt="Foto 2" class="carousel-image">
-          <img src="./assets/img/carrossel/foto-3.jpeg" alt="Foto 3" class="carousel-image">
-          <img src="./assets/img/carrossel/foto-4.jpeg" alt="Foto 4" class="carousel-image">
-          <img src="./assets/img/carrossel/foto-5.jpeg" alt="Foto 5" class="carousel-image">
+          <img src="./assets/img/carrossel/bjj2.jpg" alt="Treino de Jiu-Jitsu no CT Vieira Brothers"
+            class="carousel-image active">
+          <img src="./assets/img/carrossel/foto-1.jpeg" alt="Equipe treinando no CT Vieira Brothers"
+            class="carousel-image">
+          <img src="./assets/img/carrossel/foto-2.jpeg" alt="Alunos em aula de Jiu-Jitsu" class="carousel-image">
+          <img src="./assets/img/carrossel/foto-3.jpeg" alt="Treinamento infantil no CT Vieira Brothers"
+            class="carousel-image">
+          <img src="./assets/img/carrossel/foto-4.jpeg" alt="Treino técnico no CT Vieira Brothers"
+            class="carousel-image">
+          <img src="./assets/img/carrossel/foto-5.jpeg" alt="Atletas do CT Vieira Brothers" class="carousel-image">
         </div>
 
-        <button class="carousel-btn prev" type="button" id="prevSlide">‹</button>
-        <button class="carousel-btn next" type="button" id="nextSlide">›</button>
+        <button class="carousel-btn prev" type="button" id="prevSlide" aria-label="Imagem anterior">‹</button>
+        <button class="carousel-btn next" type="button" id="nextSlide" aria-label="Próxima imagem">›</button>
 
         <div class="carousel-dots" id="carouselDots">
-          <button class="dot active" type="button"></button>
-          <button class="dot" type="button"></button>
-          <button class="dot" type="button"></button>
+          <button class="dot active" type="button" aria-label="Ir para imagem 1"></button>
+          <button class="dot" type="button" aria-label="Ir para imagem 2"></button>
+          <button class="dot" type="button" aria-label="Ir para imagem 3"></button>
         </div>
       </div>
+
       <div class="sobre-float">
         <div class="num">2015</div>
         <div class="txt">Fundação</div>
       </div>
     </div>
+
     <div class="sobre-text">
       <div class="section-label">Quem somos</div>
-      <h2 class="section-title">Tradição e<br>Excelência</h2>
+      <h2 class="section-title" id="sobre-title">Tradição e<br>Excelência</h2>
       <p class="sobre-para">
         A CT Vieira Brothers nasceu da paixão dos irmãos Vieira pelas artes marciais e do desejo de transformar vidas
         através do esporte. Desde 2015, formamos atletas e pessoas melhores.
@@ -194,6 +215,7 @@
         Nossa academia reúne professores campeões, estrutura de ponta e uma comunidade forte. Aqui você treina para
         evoluir, dentro e fora do tatame.
       </p>
+
       <div class="sobre-feats">
         <div class="feat">
           <div class="feat-icon"></div>
@@ -224,11 +246,11 @@
   </section>
 
   <!-- HORÁRIOS -->
-  <section id="horarios">
+  <section id="horarios" aria-labelledby="horarios-title">
     <div class="horarios-header">
       <div>
         <div class="section-label">Programação</div>
-        <h2 class="section-title">Grade de<br>Horários</h2>
+        <h2 class="section-title" id="horarios-title">Grade de<br>Horários</h2>
       </div>
       <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.8; max-width:380px;">
         Oferecemos horários flexíveis para você treinar sem abrir mão da sua rotina. Manhã, tarde e noite — 5 dias por
@@ -248,16 +270,16 @@
   </section>
 
   <!-- PLANOS -->
-  <section id="planos">
+  <section id="planos" aria-labelledby="planos-title">
     <div style="text-align:center; margin-bottom:1rem;">
       <div class="section-label" style="justify-content:center;">Investimento</div>
-      <h2 class="section-title">Escolha seu Plano</h2>
+      <h2 class="section-title" id="planos-title">Escolha seu Plano</h2>
     </div>
 
     <div class="planos-grid">
-      <div class="plano-card">
+      <article class="plano-card">
         <div class="plano-label">Iniciante ao Avançado</div>
-        <div class="plano-name">Jiu-Jitsu - Adulto</div>
+        <h3 class="plano-name">Jiu-Jitsu - Adulto</h3>
         <div class="plano-price">
           <span class="plano-currency">R$</span>
           <span class="plano-val">90</span>
@@ -270,12 +292,12 @@
           <li>Aula experimental grátis</li>
         </ul>
         <a href="#contato" class="btn-plano">Começar Agora</a>
-      </div>
+      </article>
 
-      <div class="plano-card featured">
+      <article class="plano-card featured">
         <div class="popular-badge">⭐ Mais Escolhido</div>
         <div class="plano-label">Completo</div>
-        <div class="plano-name">Jiu-Jitsu - Competidor</div>
+        <h3 class="plano-name">Jiu-Jitsu - Competidor</h3>
         <div class="plano-price">
           <span class="plano-currency">R$</span>
           <span class="plano-val">130</span>
@@ -289,11 +311,11 @@
           <li>Recovery (1x por semana)</li>
         </ul>
         <a href="#contato" class="btn-plano">Escolher Plano</a>
-      </div>
+      </article>
 
-      <div class="plano-card">
-        <div class="plano-label">INFANTIL</div>
-        <div class="plano-name">Jiu-Jitsu - KIDS</div>
+      <article class="plano-card">
+        <div class="plano-label">Infantil</div>
+        <h3 class="plano-name">Jiu-Jitsu - Kids</h3>
         <div class="plano-price">
           <span class="plano-currency">R$</span>
           <span class="plano-val">90</span>
@@ -306,19 +328,20 @@
           <li>Aula experimental grátis</li>
         </ul>
         <a href="#contato" class="btn-plano">Começar Agora</a>
-      </div>
+      </article>
     </div>
   </section>
 
   <!-- CONTATO -->
-  <section id="contato">
+  <section id="contato" aria-labelledby="contato-title">
     <div class="contato-info">
       <div class="section-label">Fale Conosco</div>
-      <h2 class="section-title">Venha Treinar<br>com a Gente</h2>
+      <h2 class="section-title" id="contato-title">Venha Treinar<br>com a Gente</h2>
       <p class="contato-para">
         Sua primeira aula é por nossa conta. Entre em contato e agende sua visita — um de nossos professores vai te
         receber e mostrar tudo que a CT Vieira Brothers tem a oferecer.
       </p>
+
       <div class="contato-items">
         <div class="contato-item">
           <div class="contato-item-icon">📍</div>
@@ -330,6 +353,7 @@
             </a>
           </div>
         </div>
+
         <div class="contato-item">
           <div class="contato-item-icon">📞</div>
           <div class="contato-item-text">
@@ -337,6 +361,7 @@
             <span>(85) 98732-8337</span>
           </div>
         </div>
+
         <div class="contato-item">
           <div class="contato-item-icon">🕐</div>
           <div class="contato-item-text">
@@ -344,13 +369,6 @@
             <span>Seg–Sex: 8h às 22h | Consultar horários de aulas</span>
           </div>
         </div>
-        <!-- <div class="contato-item">
-          <div class="contato-item-icon">📧</div>
-          <div class="contato-item-text">
-            <strong>E-mail</strong>
-            <span>contato@ctvieirabros.com.br</span>
-          </div>
-        </div> -->
       </div>
     </div>
 
@@ -410,10 +428,9 @@
 
   <!-- FOOTER -->
   <footer>
-
     <div class="footer-logo">
       <a href="#hero" class="nav-logo">
-        <img src="./assets/img/logo_ct_vieira.png" alt="Logo do CT Vieira Brothers" class="footer-logo-img" />
+        <img src="./assets/img/logo_ct_vieira.png" alt="Logo do CT Vieira Brothers" class="footer-logo-img">
       </a>
     </div>
 
@@ -423,7 +440,7 @@
         <a href="https://devlab-site.vercel.app" target="_blank" rel="noopener noreferrer"
           title="Acessar site da Dev Lab" class="footer-dev-link">
           <span>Site desenvolvido por:</span>
-          <img src="./assets/icons/devlab-black-rb.png" alt="Dev Lab" class="footer-dev-logo" />
+          <img src="./assets/icons/devlab-black-rb.png" alt="Dev Lab" class="footer-dev-logo">
         </a>
       </p>
     </div>
@@ -431,25 +448,24 @@
     <div class="footer-socials">
       <a href="https://www.instagram.com/ctvieirabrothers" class="social-btn" title="Instagram"
         aria-label="Instagram do CT Vieira Brothers" target="_blank" rel="noopener noreferrer">
-        <img src="./assets/icons/instagram.png" alt="Instagram" class="social-icon" />
+        <img src="./assets/icons/instagram.png" alt="Instagram" class="social-icon">
       </a>
 
-      <a href="" class="social-btn" title="Facebook" aria-label="Facebook do CT Vieira Brothers"
-        rel="noopener noreferrer">
-        <img src="./assets/icons/facebook.png" alt="Facebook" class="social-icon" />
+      <a href="#" class="social-btn" title="Facebook" aria-label="Facebook do CT Vieira Brothers">
+        <img src="./assets/icons/facebook.png" alt="Facebook" class="social-icon">
       </a>
 
-      <a href="" class="social-btn" title="YouTube" aria-label="YouTube do CT Vieira Brothers"
-        rel="noopener noreferrer">
-        <img src="./assets/icons/youtube.png" alt="YouTube" class="social-icon" />
+      <a href="#" class="social-btn" title="YouTube" aria-label="YouTube do CT Vieira Brothers">
+        <img src="./assets/icons/youtube.png" alt="YouTube" class="social-icon">
       </a>
     </div>
   </footer>
 
   <!-- WHATSAPP FLOAT -->
   <a href="https://wa.me/5585987328337?text=Olá,%20quero%20mais%20informações%20sobre%20as%20Artes%20Marciais%20do%20CT%20Vieira%20Brothers."
-    class="whatsapp-float" target="_blank" title="Falar no WhatsApp"> <img src="./assets/icons/whatsapp.png"
-      alt="WhatsApp" class="social-icon-wpp" /></a>
+    class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Falar no WhatsApp">
+    <img src="./assets/icons/whatsapp.png" alt="WhatsApp" class="social-icon-wpp">
+  </a>
 
   <script src="./js/main.js"></script>
 </body>
