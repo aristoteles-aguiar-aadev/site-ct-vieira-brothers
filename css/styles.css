@@ -437,7 +437,7 @@ section {
 
 /* ─── MODALIDADES ──────────────────────────────────── */
 #modalidades {
-  background: var(--gray-dark);
+  background: var(--black);
   position: relative;
   overflow: hidden;
 }
@@ -541,6 +541,7 @@ section {
 
 /* ─── SOBRE ───────────────────────────────────────── */
 #sobre {
+  background: var(--gray-dark);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6rem;
@@ -730,6 +731,37 @@ section {
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.5;
+}
+/* ─── FILIAIS ────────────────────────────────────── */
+#filiais {
+  background: var(--black);
+}
+.filiais-header {
+  border-top: 1px solid rgba(255, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.filiais-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filial-item {
+  background: var(--black);
+  padding: 35px 48px;
+  border-radius: 12px;
+}
+
+.filial-logo {
+  width: 180px;
+  height: 130px;
+  object-fit: contain;
+  display: flex;
 }
 
 /* ─── HORÁRIOS ────────────────────────────────────── */
