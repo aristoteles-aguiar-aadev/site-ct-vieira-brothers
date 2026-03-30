@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@tailwindplus/elements": "^1.0.22",
+    "tailwindcss": "^4.2.2"
+  }
+}

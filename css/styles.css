@@ -764,6 +764,15 @@ section {
   display: flex;
 }
 
+.filial-name-location {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 4px;
+  text-align: center;
+}
+
 /* ─── HORÁRIOS ────────────────────────────────────── */
 #horarios {
   background: var(--gray-dark);
