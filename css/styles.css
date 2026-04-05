@@ -75,6 +75,35 @@ nav {
   text-transform: uppercase;
   line-height: 0;
 }
+
+.nav-logo-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-decoration: none;
+  gap: 4px;
+  max-width: 320px;
+}
+
+.nav-logo-img {
+  display: block;
+  max-height: 52px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+.nav-logo-subtitle-footer {
+  margin: -10px 0 0 8px;
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 15px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 0;
+}
 .nav-logo .vb {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 800;
@@ -292,6 +321,21 @@ nav {
   margin-bottom: 1.5rem;
   animation: heroIn 0.9s 0.1s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
+
+/* Belt color strip */
+/* .hero-belt-strip {
+  display: flex;
+  gap: 0;
+  height: 5px;
+  margin-top: 1rem;
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-belt-strip span {
+  flex: 1;
+} */
 
 .hero-title {
   font-family: "Barlow Condensed", sans-serif;
@@ -1261,6 +1305,36 @@ footer {
   width: 140px;
   height: auto;
   display: block;
+  margin-bottom: 1px;
+}
+.nav-logo-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-decoration: none;
+  gap: 4px;
+  max-width: 320px;
+}
+
+/* .nav-logo-img {
+  display: block;
+  max-height: 52px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+} */
+.nav-logo-subtitle-footer {
+  margin: -80px 0 0 -10px;
+  display: flex;
+  position: absolute;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 15px;
+  color: var(--text-muted);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 0;
 }
 
 .footer-center {
@@ -1537,6 +1611,27 @@ footer {
     color: var(--red);
   }
   @media (max-width: 700px) {
+    .filiais-header {
+      border-top: 1px solid rgba(255, 0, 0, 0.04);
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      gap: 3rem;
+    }
+    .filial-item {
+      background: var(--black);
+      padding: 35px 48px;
+      border-radius: 12px;
+      display: contents;
+    }
+    .filiais-logos {
+      display: flow;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
     footer {
       flex-direction: column;
       text-align: center;
@@ -1553,6 +1648,25 @@ footer {
 
     .footer-logo {
       order: 1;
+    }
+    .footer-logo-img {
+      width: 120px;
+      height: auto;
+      display: flex;
+      margin: 0 0 -40px -10px;
+      padding: auto;
+    }
+    .nav-logo-subtitle-footer {
+      margin: -20px 0 0 -40px;
+      display: flex;
+      position: absolute;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 15px;
+      color: var(--text-muted);
+      font-weight: 400;
+      text-transform: uppercase;
+      line-height: 0;
     }
   }
 }
