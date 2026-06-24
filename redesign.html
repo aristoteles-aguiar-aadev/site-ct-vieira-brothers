@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CT Vieira Brothers | Academia de Jiu-Jitsu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: {
+              DEFAULT: '#d10000',
+              dark: '#9b0000'
+            },
+            dark: {
+              DEFAULT: '#000000',
+              secondary: '#1c1c1e',
+              tertiary: '#2c2c2e'
+            },
+            text: {
+              primary: '#ffffff',
+              secondary: '#ebebf599',
+              muted: '#ebebf54d'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            condensed: ['Barlow Condensed', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .carousel-slide {
+      display: none;
+    }
+    .carousel-slide.active {
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-dark text-text-primary font-sans">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-dark/90 backdrop-blur-sm border-b border-dark-tertiary">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img src="assets/img/logo_ct_vieira.png" alt="CT Vieira Brothers Logo" class="h-12 w-auto">
+        <span class="font-condensed text-xl font-bold">CT Vieira Brothers</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#about" class="text-text-secondary hover:text-text-primary transition-colors">Sobre</a>
+        <a href="#modalities" class="text-text-secondary hover:text-text-primary transition-colors">Modalidades</a>
+        <a href="#schedule" class="text-text-secondary hover:text-text-primary transition-colors">Horários</a>
+        <a href="#pricing" class="text-text-secondary hover:text-text-primary transition-colors">Planos</a>
+        <a href="#locations" class="text-text-secondary hover:text-text-primary transition-colors">Unidades</a>
+        <a href="#contact" class="text-text-secondary hover:text-text-primary transition-colors">Contato</a>
+      </div>
+      <button id="mobile-menu-toggle" class="md:hidden text-text-primary focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden bg-dark-secondary border-t border-dark-tertiary">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4">
+        <a href="#about" class="text-text-secondary hover:text-text-primary transition-colors py-2">Sobre</a>
+        <a href="#modalities" class="text-text-secondary hover:text-text-primary transition-colors py-2">Modalidades</a>
+        <a href="#schedule" class="text-text-secondary hover:text-text-primary transition-colors py-2">Horários</a>
+        <a href="#pricing" class="text-text-secondary hover:text-text-primary transition-colors py-2">Planos</a>
+        <a href="#locations" class="text-text-secondary hover:text-text-primary transition-colors py-2">Unidades</a>
+        <a href="#contact" class="text-text-secondary hover:text-text-primary transition-colors py-2">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center bg-dark">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-24">
+      <div class="max-w-3xl">
+        <span class="font-condensed text-accent text-sm uppercase tracking-wider mb-4 block fade-in">Academia de Jiu-Jitsu em Fortaleza</span>
+        <h1 class="font-condensed text-5xl lg:text-7xl font-bold mb-6 fade-in">Domine o Jiu-Jitsu com a família Vieira</h1>
+        <p class="text-text-secondary text-xl lg:text-2xl mb-10 leading-relaxed fade-in">Fundada pelos irmãos Vieira, nossa academia oferece treinamento de excelência para todas as idades e níveis.</p>
+        <div class="flex flex-wrap gap-4 fade-in">
+          <a href="#pricing" class="bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-full font-medium transition-colors">Comece agora</a>
+          <a href="#contact" class="border border-accent text-accent hover:bg-accent/10 px-8 py-4 rounded-full font-medium transition-colors">Fale conosco</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 bg-dark-secondary">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 fade-in">
+        <span class="font-condensed text-accent text-sm uppercase tracking-wider mb-4 block">Sobre nós</span>
+        <h2 class="font-condensed text-4xl lg:text-5xl font-bold">Tradição e excelência no Jiu-Jitsu</h2>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="fade-in">
+          <div class="carousel relative rounded-2xl overflow-hidden shadow-2xl">
+            <div class="carousel-slide active">
+              <img src="assets/img/carrossel/bjj2.jpg" alt="Jiu-Jitsu Training" class="w-full h-96 object-cover">
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/img/carrossel/foto-1.jpeg" alt="Class Photo 1" class="w-full h-96 object-cover">
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/img/carrossel/foto-2.jpeg" alt="Class Photo 2" class="w-full h-96 object-cover">
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/img/carrossel/foto-3.jpeg" alt="Class Photo 3" class="w-full h-96 object-cover">
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/img/carrossel/foto-4.jpeg" alt="Class Photo 4" class="w-full h-96 object-cover">
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/img/carrossel/foto-5.jpeg" alt="Class Photo 5" class="w-full h-96 object-cover">
+            </div>
+            <button class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-dark/50 text-white p-2 rounded-full hover:bg-dark/70 transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 bg-dark/50 text-white p-2 rounded-full hover:bg-dark/70 transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="fade-in">
+          <p class="text-text-secondary text-lg leading-relaxed mb-6">A CT Vieira Brothers é uma academia de Jiu-Jitsu fundada em Fortaleza, Ceará, pelos irmãos Vieira, com o objetivo de levar a arte suave para todos, desde iniciantes até atletas de alto rendimento.</p>
+          <p class="text-text-secondary text-lg leading-relaxed mb-6">Nossa metodologia é baseada na tradição da família Cicero Costha, garantindo um ensino técnico e estruturado, com foco no desenvolvimento físico, mental e social dos nossos alunos.</p>
+          <p class="text-text-secondary text-lg leading-relaxed">Contamos com unidades em diversos bairros de Fortaleza, levando qualidade e tradição para perto de você.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modalities Section -->
+  <section id="modalities" class="py-24 bg-dark">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 fade-in">
+        <span class="font-condensed text-accent text-sm uppercase tracking-wider mb-4 block">Modalidades</span>
+        <h2 class="font-condensed text-4xl lg:text-5xl font-bold">Treinos para todas as idades</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-dark-secondary rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow fade-in">
+          <div class="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-condensed text-2xl font-bold mb-4">Jiu-Jitsu Adulto</h3>
+          <p class="text-text-secondary mb-6">Treinos focados em técnica, condicionamento físico e defesa pessoal para adultos de todos os níveis.</p>
+          <a href="#schedule" class="text-accent hover:text-accent-dark font-medium transition-colors">Ver horários →</a>
+        </div>
+        <div class="bg-dark-secondary rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow fade-in">
+          <div class="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-condensed text-2xl font-bold mb-4">Jiu-Jitsu Kids</h3>
+          <p class="text-text-secondary mb-6">Desenvolvimento motor, disciplina e socialização para crianças através do Jiu-Jitsu lúdico e seguro.</p>
+          <a href="#schedule" class="text-accent hover:text-accent-dark font-medium transition-colors">Ver horários →</a>
+        </div>
+        <div class="bg-dark-secondary rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow fade-in">
+          <div class="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-condensed text-2xl font-bold mb-4">Muay Thai</h3>
+          <p class="text-text-secondary mb-6">Em breve: treinos de Muay Thai para complementar seu condicionamento físico e defesa pessoal.</p>
+          <a href="#contact" class="text-accent hover:text-accent-dark font-medium transition-colors">Avise-me quando lançar →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule" class="py-24 bg-dark-secondary">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 fade-in">
+        <span class="font-condensed text-accent text-sm uppercase tracking-wider mb-4 block">Horários</span>
+        <h2 class="font-condensed text-4xl lg:text-5xl font-bold">Confira nossos horários de treino</h2>
+      </div>
+      <div class="overflow-x-auto rounded-2xl shadow-lg fade-in">
+        <table class="w-full bg-dark-secondary">
+          <thead class="border-b border-dark-tertiary">
+            <tr>
+              <th class="text-left p-4 font-condensed text-lg">Horário</th>
+              <th class="text-left p-4 font-condensed text-lg">Segunda</th>
+              <th class="text-left p-4 font-condensed text-lg">Terça</th>
+              <th class="text-left p-4 font-condensed text-lg">Quarta</th>
+              <th class="text-left p-4 font-condensed text-lg">Quinta</th>
+              <th class="text-left p-4 font-condensed text-lg">Sexta</th>
+              <th class="text-left p-4 font-condensed text-lg">Sábado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-dark-tertiary hover:bg-dark-tertiary/50 transition-colors">
+              <td class="p-4 font-medium">07:00 - 08:30</td>
+              <td class="p-4 text-text-secondary">Jiu-Jitsu Adulto</td>
+              <td class="p-4 text-text-secondary">-</td>
+              <td class="p-4 text-text-secondary">Jiu-Jitsu Adulto</td>
+              <td class="p-4 text-text-secondary">-</td>
+              <td class="p-4 text-text-secondary">Jiu-Jitsu Adulto</td>
+              <td class="p-4 text-text-secondary">-</td>
+            </tr>
+            <tr class="border-b border-dark-tertiary hover:bg-dark-tertiary/50 transition-colors">
+              <td class="p-4 font-medium">09:00 - 10:30</td>
+              <td class="p-4 text-text-secondary">Jiu-Jitsu Kids</td>
+              <td class="p-4 text-text-secondary">Jiu-Jitsu Kids</td>
+              <td class="p-4 text-text-secondary">Jiu-Jitsu Kids</td>
+              <td class="p-4 text-text-secondary">Jiu-Jitsu Kids</td>
+              <td class="p-4 text-text-secondary">Jiu-Jitsu Kids</td>
+              <td class="p-4 text-text-secondary">Jiu-Jitsu Kids</td>
+            </tr>
+            <tr class="border-b border-dark-tertiary hover:bg-dark-tertiary/50 transition-colors">
+              <td class="p-4 font-medium">19:00 - 20:30</td>
+              <td class="p-4 text-text-secondary">Jiu-Jitsu Adulto</td>
+              <td class="p-4 text-text-secondary">Jiu-Jitsu Adulto</td>
+              <td class="p-4 text-text-secondary">Jiu-Jitsu Adulto</td>
+              <td class="p-4 text-text-secondary">Jiu-Jitsu Adulto</td>
+              <td class="p-4 text-text-secondary">Jiu-Jitsu Adulto</td>
+              <td class="p-4 text-text-secondary">-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-24 bg-dark">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 fade-in">
+        <span class="font-condensed text-accent text-sm uppercase tracking-wider mb-4 block">Planos</span>
+        <h2 class="font-condensed text-4xl lg:text-5xl font-bold">Escolha o plano ideal para você</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-dark-secondary rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow fade-in">
+          <h3 class="font-condensed text-2xl font-bold mb-4">Básico</h3>
+          <p class="text-text-secondary mb-6">Ideal para iniciantes que querem experimentar o Jiu-Jitsu.</p>
+          <div class="mb-8">
+            <span class="font-condensed text-4xl font-bold">R$ 99</span>
+            <span class="text-text-secondary">/mês</span>
+          </div>
+          <ul class="space-y-4 mb-8 text-text-secondary">
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              2 treinos por semana
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Acesso a uma unidade
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Kimono básico incluso
+            </li>
+          </ul>
+          <a href="#contact" class="block w-full bg-dark-tertiary hover:bg-dark-tertiary/70 text-center py-4 rounded-full font-medium transition-colors">Assinar agora</a>
+        </div>
+        <div class="bg-dark-secondary rounded-2xl p-8 shadow-xl border-2 border-accent relative fade-in">
+          <div class="absolute top-4 right-4 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</div>
+          <h3 class="font-condensed text-2xl font-bold mb-4">Premium</h3>
+          <p class="text-text-secondary mb-6">O plano mais escolhido, com treinos ilimitados.</p>
+          <div class="mb-8">
+            <span class="font-condensed text-4xl font-bold">R$ 149</span>
+            <span class="text-text-secondary">/mês</span>
+          </div>
+          <ul class="space-y-4 mb-8 text-text-secondary">
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Treinos ilimitados
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Acesso a todas as unidades
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Kimono premium incluso
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Avaliação física mensal
+            </li>
+          </ul>
+          <a href="#contact" class="block w-full bg-accent hover:bg-accent-dark text-center py-4 rounded-full font-medium text-white transition-colors">Assinar agora</a>
+        </div>
+        <div class="bg-dark-secondary rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow fade-in">
+          <h3 class="font-condensed text-2xl font-bold mb-4">Família</h3>
+          <p class="text-text-secondary mb-6">Ideal para pais e filhos treinarem juntos.</p>
+          <div class="mb-8">
+            <span class="font-condensed text-4xl font-bold">R$ 199</span>
+            <span class="text-text-secondary">/mês</span>
+          </div>
+          <ul class="space-y-4 mb-8 text-text-secondary">
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              2 adultos + 2 crianças
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Acesso a todas as unidades
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Kimonos inclusos
+            </li>
+          </ul>
+          <a href="#contact" class="block w-full bg-dark-tertiary hover:bg-dark-tertiary/70 text-center py-4 rounded-full font-medium transition-colors">Assinar agora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations Section -->
+  <section id="locations" class="py-24 bg-dark-secondary">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 fade-in">
+        <span class="font-condensed text-accent text-sm uppercase tracking-wider mb-4 block">Unidades</span>
+        <h2 class="font-condensed text-4xl lg:text-5xl font-bold">Encontre a unidade mais próxima</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-dark-secondary rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow fade-in">
+          <img src="assets/img/filiais/carlos-henrique.png" alt="Carlos Henrique Branch" class="h-12 w-auto mb-4">
+          <h3 class="font-condensed text-xl font-bold mb-2">Unidade Carlos Henrique</h3>
+          <p class="text-text-secondary mb-4">Rua Exemplo, 123 - Bairro, Fortaleza - CE</p>
+          <a href="https://maps.google.com" target="_blank" class="text-accent hover:text-accent-dark font-medium transition-colors">Ver no mapa →</a>
+        </div>
+        <div class="bg-dark-secondary rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow fade-in">
+          <img src="assets/img/filiais/ds-bjj.png" alt="DS BJJ Branch" class="h-12 w-auto mb-4">
+          <h3 class="font-condensed text-xl font-bold mb-2">Unidade DS BJJ</h3>
+          <p class="text-text-secondary mb-4">Rua Exemplo, 456 - Bairro, Fortaleza - CE</p>
+          <a href="https://maps.google.com" target="_blank" class="text-accent hover:text-accent-dark font-medium transition-colors">Ver no mapa →</a>
+        </div>
+        <div class="bg-dark-secondary rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow fade-in">
+          <img src="assets/img/filiais/alysson-alexandre-removebg.png" alt="Alysson Alexandre Branch" class="h-12 w-auto mb-4">
+          <h3 class="font-condensed text-xl font-bold mb-2">Unidade Alysson Alexandre</h3>
+          <p class="text-text-secondary mb-4">Rua Exemplo, 789 - Bairro, Fortaleza - CE</p>
+          <a href="https://maps.google.com" target="_blank" class="text-accent hover:text-accent-dark font-medium transition-colors">Ver no mapa →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 bg-dark">
+    <div class="max-w-3xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 fade-in">
+        <span class="font-condensed text-accent text-sm uppercase tracking-wider mb-4 block">Contato</span>
+        <h2 class="font-condensed text-4xl lg:text-5xl font-bold">Fale conosco</h2>
+        <p class="text-text-secondary text-lg mt-4">Preencha o formulário abaixo e entraremos em contato em breve.</p>
+      </div>
+      <form id="contact-form" class="space-y-6 fade-in" action="https://formsubmit.co/your-email@example.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <div>
+          <label for="name" class="block text-text-secondary mb-2 font-medium">Nome completo</label>
+          <input type="text" id="name" name="name" required class="w-full bg-dark-secondary border border-dark-tertiary rounded-lg p-4 text-text-primary focus:outline-none focus:border-accent transition-colors">
+        </div>
+        <div>
+          <label for="email" class="block text-text-secondary mb-2 font-medium">E-mail</label>
+          <input type="email" id="email" name="email" required class="w-full bg-dark-secondary border border-dark-tertiary rounded-lg p-4 text-text-primary focus:outline-none focus:border-accent transition-colors">
+        </div>
+        <div>
+          <label for="phone" class="block text-text-secondary mb-2 font-medium">Telefone</label>
+          <input type="tel" id="phone" name="phone" required class="w-full bg-dark-secondary border border-dark-tertiary rounded-lg p-4 text-text-primary focus:outline-none focus:border-accent transition-colors">
+        </div>
+        <div>
+          <label for="message" class="block text-text-secondary mb-2 font-medium">Mensagem</label>
+          <textarea id="message" name="message" rows="5" class="w-full bg-dark-secondary border border-dark-tertiary rounded-lg p-4 text-text-primary focus:outline-none focus:border-accent transition-colors"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-accent hover:bg-accent-dark text-white py-4 rounded-full font-medium transition-colors">Enviar mensagem</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-dark-secondary border-t border-dark-tertiary">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center text-text-muted text-sm">
+      <div class="flex justify-center gap-6 mb-6">
+        <a href="#" class="hover:text-text-primary transition-colors">
+          <img src="assets/icons/instagram.png" alt="Instagram" class="h-6 w-auto">
+        </a>
+        <a href="#" class="hover:text-text-primary transition-colors">
+          <img src="assets/icons/facebook.png" alt="Facebook" class="h-6 w-auto">
+        </a>
+        <a href="#" class="hover:text-text-primary transition-colors">
+          <img src="assets/icons/youtube.png" alt="YouTube" class="h-6 w-auto">
+        </a>
+        <a href="#" class="hover:text-text-primary transition-colors">
+          <img src="assets/icons/whatsapp.png" alt="WhatsApp" class="h-6 w-auto">
+        </a>
+      </div>
+      <p>© 2026 CT Vieira Brothers. Todos os direitos reservados.</p>
+      <p class="mt-2">Desenvolvido por <a href="#" class="text-accent hover:text-accent-dark">DevLab</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Carousel
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      currentSlide = (index + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+    nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+    setInterval(() => showSlide(currentSlide + 1), 5000);
+
+    // Fade-in Animation
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(el => observer.observe(el));
+
+    // Form Submission
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(contactForm);
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+          contactForm.reset();
+        } else {
+          alert('Erro ao enviar mensagem. Por favor, tente novamente.');
+        }
+      } catch (error) {
+        alert('Erro ao enviar mensagem. Por favor, tente novamente.');
+      }
+    });
+  </script>
+</body>
+</html>

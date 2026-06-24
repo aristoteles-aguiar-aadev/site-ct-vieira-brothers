@@ -918,7 +918,7 @@ section {
 .planos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2px;
+  gap: 2rem;
   margin-top: 4rem;
 }
 
@@ -1079,6 +1079,7 @@ section {
   text-transform: uppercase;
   padding: 4px 16px;
   white-space: nowrap;
+  padding: 1rem;
 }
 
 /* ─── CONTATO ─────────────────────────────────────── */
